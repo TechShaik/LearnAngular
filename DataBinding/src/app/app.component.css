@@ -1,0 +1,19 @@
+.text-color{
+    color: green;
+    background-color: yellow;
+}
+
+.danger{
+
+  color: black;
+
+    background-color: red;
+     height: 50px;
+        width: 50px;
+}
+
+.text-size{
+        color: black;
+        
+}
+

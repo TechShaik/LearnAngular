@@ -1,0 +1,17 @@
+ Hello {{title}}
+ <img [src]="image" alt="angular" height="100px" width="100px">
+ <button [disabled]="isDisabled">My button</button>
+ <div [style.backgroundColor]="bg">
+  <h2 [style.color]="textColor">Title</h2>
+  <p [style.color]="textColor">This is angular</p>
+ </div>
+
+ <h2>Counter Incrementer</h2>
+ <button (click)="counterIncrement()">Increment</button>
+ <p>Counter : {{counter}}</p>
+  <input [(ngModel)]="inputText" placeholder="Enter text"/>
+  <p>You entered : {{inputText}}</p>
+
+  <p [ngClass]="classes">box1</p>
+
+  <p [ngStyle]="{backgroundColor: bgc}" [ngClass]="classes">box2</p>
