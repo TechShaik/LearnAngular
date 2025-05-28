@@ -1,0 +1,16 @@
+Hello {{title | uppercase}}
+
+Hello {{title | lowercase}}
+
+<div>
+  Today is {{today}}<br>
+  Today is {{today | date:'fullDate'}}<br>
+  Today is {{today | date:'shortTime'}}<br>
+  Today is {{today | date:'hh:mm:ss'}}<br>
+</div>
+<p>Currency {{currency }}</p>
+<p>Currency {{currency | currency:'INR'}}</p>
+<p>{{currency|percent}}</p>
+
+<h3>{{title|append : " Custom Pipes"}}</h3>
+
