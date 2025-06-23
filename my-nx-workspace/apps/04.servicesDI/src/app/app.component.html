@@ -1,0 +1,75 @@
+ 
+<!-- Search by ID -->
+  <h2 class="heading">Student Management</h2>
+<div class="search-container">
+ 
+  <div class="item">
+  <label for="studentIdInput">Search student by ID:</label>
+  <input type="number" id="studentIdInput" #studentIdInput placeholder="Enter Student ID">
+  <br>
+  
+<button (click)="getStudentById(+studentIdInput.value)">Search</button>
+</div>
+
+ 
+<!-- Search by Name -->
+<div class="item">
+  <label for="studentNameInput">Search student by Name:</label>
+  <input type="text" id="studentNameInput" #studentNameInput placeholder="Enter Student Name">
+   <br>
+  <button (click)="getStudentByName(studentNameInput.value)">Search</button>
+</div>
+ 
+ 
+  
+ <div class="paged-container">
+  <h2>Paged Data</h2>
+
+  <table>
+    <tr>
+      <td><label for="sortBy">Sort By:</label></td>
+      <td><input type="text" id="sortBy" [(ngModel)]="sortBy" placeholder="Enter Sort Field" /></td>
+    </tr>
+    <tr>
+      <td><label for="ascending">Ascending:</label></td>
+      <td>
+        <select [(ngModel)]="ascending">
+          <option [value]="true">True</option>
+          <option [value]="false">False</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="size">Page Size:</label></td>
+      <td>
+        <select [(ngModel)]="pageSize" (change)="fetchPagedData()">
+          <option *ngFor="let size of pageSizes" [value]="size">{{ size }}</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+
+   
+ <div *ngIf="pagedData && pagedData.length > 0" class="result-container">
+  <h3>Result</h3>
+  <div *ngFor="let student of pagedData">
+    <p>Name: {{ student.name }}</p>
+    <p>Branch: {{ student.branch }}</p>
+    <hr />
+  </div>
+</div>
+<button (click)="prevPage()" [disabled]="currentPage === 0">Previous</button>
+  <span>Page {{ currentPage + 1 }}</span>
+  <button (click)="nextPage()">Next</button>
+</div>
+
+
+</div>
+ 
+<div *ngIf="std && std.name" class="result-container">
+   
+   <h3>Result </h3>
+  <p><strong>Name:</strong> {{ std.name }}</p>
+  <p><strong>Branch:</strong> {{ std.branch }}</p>
+</div>
+    

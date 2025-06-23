@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "projects": {
+    "04.servicesDI": {
+      "tags": []
+    },
+    "backend-api": {
+      "root": "apps/backend",
+      "tags": []
+    }
+  }
+}

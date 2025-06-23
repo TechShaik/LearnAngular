@@ -1,3 +1,15 @@
+Commands :
+
+new project : ng new <application-name>
+
+start : ng serve or npm start run 
+
+generate pipes : ng generate pipe <pipe-name>
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------
 Typescript
 -----------------------------------------------------------------------
 
@@ -23,7 +35,8 @@ Data binding :
 Types of Data Binding
 Angular allows both One-way and Two-way Data Binding. We will study both of them in detail in the below section.
 
-1. One-Way Binding
+ One-Way Binding:
+
 In one-way binding, data flows in a single direction, either from the component to the view (interpolation or property binding) or from the view to the component (event binding).
 
 1. Interpolation
@@ -34,4 +47,75 @@ This is achieved by using square brackets to bind a property of an HTML element 
 
 3. Event Binding
 This allows the view to communicate changes back to the component when an event occurs, such as a button click or input change. Event binding is denoted by parentheses, like (event)="handler()".
+
+Two way binding :
+
+Two-way data binding gives you a way to share data between view to source and vice versa simultaneously. When we bind data using two-way data binding the view and source are in sync and updated data accordingly.
+
+Two-way data binding uses the "ngModel" directive to bind the data and we need to import the Forms Module to use it otherwise it will throw an error.
+
+1.ngModel 2.ngClass 3.ngStyle
+--------------------------------------------------------------------------------------------------------------------------
+
+PIPES
+
+Pipes in Angular are functions that transform displayed data in the template.
+They are used to format or transform values before presenting them to the user.
+
+Data formatting in templates (e.g., date, currency).
+
+✅ Cleaner HTML templates (no complex logic).
+
+✅ Reusability (same transformation across components).
+
+--------------------------------------------------------------------------------------------------------------------------
+Dependency Injection (DI):
+
+Dependency Injection (DI) is a design pattern used in Angular to provide components, services, or objects with the dependencies they need, rather than creating them directly.
+
+It makes applications modular, testable, and maintainable.
+
+create service : ng g s <service name>
+
+service must have @Injectable
+
+add in providers in app.module.ts
+
+create object and use using constructor.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+API integration :
+
+To integrate a REST API in Angular, you use the HttpClient module. Here's a complete step-by-step guide:
+
+1.Import HttpClientModule in app.module.ts
+
+2.In service file add http client in parameter.
+
+3.Create method and use observable any component having access to that service will get data and subscribe to that function.
+
+4.In Component file create ngOnInit() with subscribe to get data and assign it to certain variable.
+
+5.Call that variable in html page.
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Type Checking :
+
+1. create an interface instead of returning any with export keyword.
+
+--------------------------------------------------------------------------------------------------------------------------
+Component Communication : 
+
+1. create a component with cmd - ng g c component/<name>
+
+2.add TaskComponent in module file.
+
+@Input decorator (Custom property binding)
+
+
+
+
+
 

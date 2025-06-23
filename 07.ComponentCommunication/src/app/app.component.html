@@ -1,0 +1,6 @@
+ {{title}}
+ <div>
+     
+     <app-task
+     *ngFor="let i of tasks" [task]="i" (taskDeleted)="deleteTask(i)"></app-task>
+    </div>

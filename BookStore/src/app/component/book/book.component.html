@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Book page</title>
+</head>
+<body>
+    <div class="book-container">
+        <div class="inner-container">
+
+            <h3 style="text-align: center;">Add Book</h3>
+            <table>
+                <tr>
+                    <td><label for="b_name">Book Name:</label></td>
+                    <td><input type="text" id="b_name" name="b_name"></td>
+                </tr>
+                <tr>
+                    <td><label for="b_author">Author:</label></td>
+                    <td><input type="text" id="b_author" name="b_author"></td>
+                </tr>
+                <tr>
+                    <td><label for="b_description">Description:</label></td>
+                    <td><textarea id="b_description" name="b_description"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="b_price">Price:</label></td>
+                    <td><input type="number" id="b_price" name="b_price"></td>
+                </tr>
+                <tr>
+                    <td><label for="b_quantity">Quantity:</label></td>
+                    <td><input type="number" id="b_quantity" name="b_quantity"></td>
+                </tr>
+                <tr>
+                    <td><label for="logo">Logo:</label></td>
+                    <td><input type="file" id="logo" name="logo" accept="image/*"></td>
+                </tr>
+            </table>
+              <button>Submit</button>
+        </div>
+
+        <div>
+            <label for="getBooks">Get Books</label>
+            <button (click)="getBooks()">Fetch Books</button>
+        </div>
+</div>
+   
+</body>
+ </html>

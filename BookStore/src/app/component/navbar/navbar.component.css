@@ -1,0 +1,13 @@
+.container{
+    background-color: rgb(34, 34, 49);
+    padding: 1rem;
+    color:  white;
+    display: flex;
+    ;
+}
+
+.container a{
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
