@@ -114,6 +114,76 @@ Component Communication :
 
 @Input decorator (Custom property binding)
 
+---------------------------------------------------------------------------------------------------------------------------
+
+Module & NgModule: 
+
+An Angular Module is a container for related components, directives, pipes, and services. It helps group features logically and manage dependencies.
+
+NgModule is a decorator (@NgModule) that turns a plain TypeScript class into an Angular module.
+
+1.every application needs atleast one module file.
+
+2.we cannot use any component etc without declaring in ngModule file.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+In Angular, lifecycle hooks are special methods that are invoked when a component is invoked, instantiated, destroyed.
+
+Hook	Purpose
+ngOnChanges()	        Called when an input-bound property changes.
+ngOnInit()          	Called once after the first ngOnChanges()—used for 				initialization.
+ngDoCheck()		Detect and act upon changes that Angular can't or doesn't 			detect.
+ngAfterContentInit()	Called after content (ng-content) has been projected into 			view.
+ngAfterContentChecked()	Called every time the projected content is checked.
+ngAfterViewInit()	Called after the component’s view and child views are 				initialized.
+ngAfterViewChecked()	Called every time the view (and child views) have been 				checked.
+ngOnDestroy()		Called just before the component is destroyed. Cleanup 				here.
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+RxJs- Reactive Extensions:
+
+Observable : It is wrapper around the asynchronous data.We use observable to handle the asynchronous data.
+
+Javascript is a single thread programming language.We have to wait until it complete the first thread.
+
+we can handle using both promise and observable.
+
+1.promise cant work with streaming data if any error occurs.
+2.promise only works when no one usind code.
+
+An Observable is a stream of data that can emit:
+
+one value,
+
+multiple values, or
+
+no value at all — over time
+
+1.to emit data use next 
+2.to emit error use error
+3.to give complete signal use complete
+
+
+of() is an operator that converts its arguments into an Observable emitting those values in sequence, then completes.
+
+from() is another RxJS creation operator that converts:
+
+arrays,strings,promises,iterables,async functions...into an observable stream.
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Async and Await :
+
+when we want to make code readable and simple and want to work with try and catch we use async & await with promises.
+
+The firstValueFrom() function is provided by RxJS and is used to:
+
+🔄 Convert an Observable into a Promise, resolving with the first emitted value.
+
+
+
 
 
 
