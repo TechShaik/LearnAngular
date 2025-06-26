@@ -7,13 +7,14 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-"start:all": "concurrently \"nx serve 04.servicesdi\" \"cd apps/backEnd && mvnw.cmd spring-boot:run\""
+    "start:all": "concurrently \"nx serve 04.servicesdi\" \"cd apps/backEnd && mvnw.cmd spring-boot:run\""
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.2.16",
     "@angular/cli": "^20.0.3",
     "@angular/compiler-cli": "^16.2.12",
     "@nrwl/angular": "^18.0.0",
+    "@nx/angular": "^16.10.0",
     "concurrently": "^9.2.0",
     "nx": "18.0.0",
     "typescript": "^5.1.6"
@@ -28,6 +29,8 @@
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
+    "primeicons": "^7.0.0",
+    "primeng": "^16.4.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.4.0",
     "zone.js": "~0.13.0"

@@ -12,8 +12,7 @@ export class ApiService {
   }
 }
 
-import { of } from 'rxjs';  
-import { HttpParams } from '@angular/common/http';
+ import { HttpParams } from '@angular/common/http';
 import { students } from '../interfaces/students.interface';
 
 @Injectable({
@@ -24,6 +23,7 @@ private url="http://localhost:8081/student/all";
 private pagedUrl="http://localhost:8081/student/pagedData";
 private studentNameUrl="http://localhost:8081/student/byName";
 private studentIdUrl="http://localhost:8081/student";
+private studentDeleteById = "http://localhost:8081/student/delete";
 
   constructor(private http:HttpClient) { }
 
@@ -50,10 +50,14 @@ getStudentById(id: number): Observable<students> {
 }
 
 
+
 getStudentByName(name: string): Observable<students> {
   return this.http.get<students>(`${this.studentNameUrl}?name=${name}`);
 }
 
+deleteStudentById(id: number) {
+return this.http.delete<string>(`http://localhost:8081/student/delete/${id}`);
+}
 
 
 }

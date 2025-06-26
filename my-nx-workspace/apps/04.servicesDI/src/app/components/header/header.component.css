@@ -1,0 +1,23 @@
+.container {
+  background-color: black;
+}
+
+.container nav {
+  height: 60px;
+}
+
+.container nav ul {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  margin: 8px 2px 2px 8px;  /* top right bottom left */
+  gap: 1rem;
+  align-items: center;
+  list-style: none;          /* ✅ Remove dots */
+}
+
+.container nav ul li a {
+  color: wheat;
+  text-decoration: none;     /* ✅ Remove underline */
+  font-weight: bold;
+}

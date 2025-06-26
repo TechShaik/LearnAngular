@@ -1,0 +1,36 @@
+ <h2 class="heading">Student Management</h2>
+<div class="search-container">
+ 
+  <div class="item">
+  <label for="studentIdInput">Search student by ID:</label>
+  <input type="number" id="studentIdInput" #studentIdInput placeholder="Enter Student ID">
+  <br>
+  
+<button (click)="getStudentById(+studentIdInput.value)">Search</button>
+</div>
+
+ 
+<!-- Search by Name -->
+<div class="item">
+  <label for="studentNameInput">Search student by Name:</label>
+  <input type="text" id="studentNameInput" #studentNameInput placeholder="Enter Student Name">
+   <br>
+  <button (click)="getStudentByName(studentNameInput.value)">Search</button>
+</div>
+<!-- 
+<div class="item">
+  <label for="studentIdInput">Delete by id:</label>
+<input type="number" id="studentIdInput" #studentIdInput placeholder="Enter Student ID">
+   <br>
+  <button (click)="deleteStudent(+studentIdInput.value)">Delete</button>
+</div> -->
+ 
+  
+<div *ngIf="std && std.name" class="result-container">
+   
+   <h3>Result </h3>
+   <p><strong>Id:</strong>{{std.id}}</p>
+  <p><strong>Name:</strong> {{ std.name }}</p>
+  <p><strong>Branch:</strong> {{ std.branch }}</p>
+</div>
+    

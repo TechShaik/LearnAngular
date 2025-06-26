@@ -1,0 +1,41 @@
+<div class="paged-container">
+  <h2>Paged Data</h2>
+
+  <table>
+    <tr>
+      <td><label for="sortBy">Sort By:</label></td>
+      <td><input type="text" id="sortBy" [(ngModel)]="sortBy" placeholder="Enter Sort Field" /></td>
+    </tr>
+    <tr>
+      <td><label for="ascending">Ascending:</label></td>
+      <td>
+        <select [(ngModel)]="ascending">
+          <option [value]="true">True</option>
+          <option [value]="false">False</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="size">Page Size:</label></td>
+      <td>
+        <select [(ngModel)]="pageSize" (change)="fetchPagedData()">
+          <option *ngFor="let size of pageSizes" [value]="size">{{ size }}</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+
+   
+ <div *ngIf="pagedData && pagedData.length > 0" class="result-container">
+  <h3>Result</h3>
+  <div *ngFor="let student of pagedData">
+    <p>Name: {{ student.name }}</p>
+    <p>Branch: {{ student.branch }}</p>
+    <hr />
+  </div>
+</div>
+<button (click)="prevPage()" [disabled]="currentPage === 0">Previous</button>
+  <span>Page {{ currentPage + 1 }}</span>
+  <button (click)="nextPage()">Next</button>
+</div>
+
